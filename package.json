@@ -1,0 +1,29 @@
+{
+  "name": "mi-primer-cicd",
+  "version": "1.0.0",
+  "description": "Mi primer pipeline CI/CD - Ing. Software II",
+  "main": "index.js",
+  "scripts": {
+  "test": "jest",
+  "start": "node app.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sduranfo/mi-primer-cicd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sduranfo/mi-primer-cicd/issues"
+  },
+  "homepage": "https://github.com/sduranfo/mi-primer-cicd#readme",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+  ,
+"jest": {
+  "testEnvironment": "node"
+}
+}
