@@ -2,7 +2,7 @@
 // Esta función es lo que vamos a probar con Jest
 
 function sumar(a, b) {
-  return a + b;
+  return a - b;
 }
 
 function iniciarServidor() {
