@@ -1,5 +1,4 @@
-// app.js — Nuestra mini API
-// Esta función es lo que vamos a probar con Jest
+// app.js — API lista para producción
 
 function sumar(a, b) {
   return a + b;
@@ -8,20 +7,22 @@ function sumar(a, b) {
 function iniciarServidor() {
   const http = require('http');
 
+  // process.env.PORT es el puerto que Render asigna automáticamente
+  // Si no existe (desarrollo local), usamos 3000
+  const PORT = process.env.PORT || 3000;
+
   const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hola Mundo desde mi Pipeline CI/CD!\n');
   });
 
-  server.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
+  server.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
   });
 }
 
-// Exportamos sumar para que el test pueda usarla
 module.exports = { sumar };
 
-// Solo iniciamos el servidor si ejecutamos este archivo directamente
 if (require.main === module) {
   iniciarServidor();
 }
