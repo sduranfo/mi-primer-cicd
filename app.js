@@ -13,7 +13,7 @@ function iniciarServidor() {
 
   const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hola Mundo desde mi Pipeline CI/CD!\n');
+    res.end('Hola Mundo DevOS\n');
   });
 
   server.listen(PORT, () => {
